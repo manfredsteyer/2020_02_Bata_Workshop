@@ -1,0 +1,52 @@
+{
+  "npmScope": "flight-workspace",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": "*",
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "flight-app-e2e": {
+      "tags": ["e2e"],
+      "implicitDependencies": ["flight-app"]
+    },
+    "flight-app": {
+      "tags": ["flights"]
+    },
+    "dashboard-e2e": {
+      "tags": ["e2e"],
+      "implicitDependencies": ["dashboard"]
+    },
+    "dashboard": {
+      "tags": ["dashboard"]
+    },
+    "flight-admin-e2e": {
+      "tags": ["e2e"],
+      "implicitDependencies": ["flight-admin"]
+    },
+    "flight-admin": {
+      "tags": ["flights"]
+    },
+    "logger-lib": {
+      "tags": ["shared"]
+    },
+    "dashboard-api": {
+      "tags": ["dashboard"]
+    },
+    "external-e2e": {
+      "tags": ["e2e"],
+      "implicitDependencies": ["external"]
+    },
+    "external": {
+      "tags": ["external"]
+    },
+    "flight-api": {
+      "tags": ["flights"]
+    },
+    "validation": {
+      "tags": []
+    }
+  }
+}
