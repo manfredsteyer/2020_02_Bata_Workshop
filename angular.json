@@ -579,6 +579,65 @@
         }
       },
       "schematics": {}
+    },
+    "checkin-feature-checkin": {
+      "projectType": "library",
+      "root": "libs/checkin/feature-checkin",
+      "sourceRoot": "libs/checkin/feature-checkin/src",
+      "prefix": "flight-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/checkin/feature-checkin/tsconfig.lib.json",
+              "libs/checkin/feature-checkin/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/checkin/feature-checkin/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/checkin/feature-checkin/jest.config.js",
+            "tsConfig": "libs/checkin/feature-checkin/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/checkin/feature-checkin/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
+    },
+    "checkin-domain": {
+      "projectType": "library",
+      "root": "libs/checkin/domain",
+      "sourceRoot": "libs/checkin/domain/src",
+      "prefix": "flight-workspace",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/checkin/domain/tsconfig.lib.json",
+              "libs/checkin/domain/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/checkin/domain/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/checkin/domain/jest.config.js",
+            "tsConfig": "libs/checkin/domain/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/checkin/domain/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {}
     }
   },
   "cli": {

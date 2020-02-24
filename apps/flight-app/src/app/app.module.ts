@@ -20,7 +20,8 @@ import { AirportComponent } from './airport/airport.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FlightBookingModule,
+
+    // FlightBookingModule, // Don't import lazy modules
 
     BrowserAnimationsModule,
     FlightCancellingModule,
@@ -37,7 +38,8 @@ import { AirportComponent } from './airport/airport.component';
     BasketComponent,
     AirportComponent
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

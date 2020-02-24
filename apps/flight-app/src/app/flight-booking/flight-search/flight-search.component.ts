@@ -4,7 +4,9 @@ import {FlightService} from '@flight-workspace/flight-api';
 @Component({
   selector: 'flight-search',
   templateUrl: './flight-search.component.html',
-  styleUrls: ['./flight-search.component.css']
+  styleUrls: ['./flight-search.component.css'],
+  //providers: [FlightService]
+  providers: [{ provide: FlightService, useClass: FlightService }]
 })
 export class FlightSearchComponent implements OnInit {
 
@@ -15,6 +17,8 @@ export class FlightSearchComponent implements OnInit {
   get flights() {
     return this.flightService.flights;
   }
+
+  flights$ = this.flightService.flights$;
 
   // "shopping basket" with selected flights
   basket: object = {

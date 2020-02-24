@@ -47,6 +47,12 @@
     },
     "validation": {
       "tags": []
+    },
+    "checkin-feature-checkin": {
+      "tags": []
+    },
+    "checkin-domain": {
+      "tags": []
     }
   }
 }
