@@ -80,7 +80,7 @@
     "eslint": "6.1.0",
     "jest": "24.1.0",
     "jest-preset-angular": "8.0.0",
-    "ng-packagr": "^9.0.0",
+    "ng-packagr": "^10.1.1",
     "ngx-build-plus": "^9.0.5",
     "prettier": "1.18.2",
     "ts-jest": "24.0.0",
